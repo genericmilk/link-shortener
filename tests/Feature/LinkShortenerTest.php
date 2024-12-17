@@ -76,8 +76,7 @@ test('user can encode a URL using the API', function () {
     $response = $this->post('/api/encode', [
         'url' => 'https://example.com',
     ]);
-
-    $response->assertOk();
+    $response->assertCreated();
 });
 
 test('user can decode a short URL using the API', function () {
